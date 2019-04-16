@@ -17,10 +17,11 @@ class resultado : AppCompatActivity() {
 
 
         //recupera os valores recebidos da outra activity;
-        val dados : Bundle = intent.extras
+        val dados : Bundle? = intent.extras
 
 
-        val ho = dados.getInt("ho")
+
+        val ho = dados!!.getInt("ho")
         val mul = dados.getInt("mul")
         val cri = dados.getInt("cri")
 
@@ -47,13 +48,13 @@ class resultado : AppCompatActivity() {
         var totallinguica = 0.0
         var totalfrango = 0.0
 
-        var totalcarnes = 0.0
+        var totalcarnes:Double
         var tarroz =0.0
         var tbatata = 0.0
         var tfarofa = 0.0
         var tpao = 0.0
 
-        var totalAcompanhamento = 0.0
+        var totalAcompanhamento:Double
 
         var ttotal = 0.0
 
